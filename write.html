@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New story – Medium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Georgia:ital@0;1&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="write-page">
+
+  <!-- TOP NAV FOR WRITE PAGE -->
+  <header class="write-header">
+    <div class="write-header-left">
+      <a href="./index.html" class="logo">Medium</a>
+      <span class="draft-status">Draft</span>
+    </div>
+
+    <div class="nav-actions">
+      <button class="btn-publish" id="publishBtn">Publish</button>
+
+      <button class="icon-btn" title="More options">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <circle cx="5" cy="12" r="1.5" />
+          <circle cx="12" cy="12" r="1.5" />
+          <circle cx="19" cy="12" r="1.5" />
+        </svg>
+      </button>
+      <button class="icon-btn" title="Notifications">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path
+            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+        </svg>
+      </button>
+      <div class="avatar" title="Profile">V</div>
+    </div>
+  </header>
+
+  <!-- MAIN EDITOR -->
+  <main class="editor-container">
+    <div class="editor-layout">
+      <!-- Title input (contenteditable for natural resizing) -->
+      <div class="editor-field title-field" contenteditable="true" data-placeholder="Title" id="storyTitle"></div>
+
+      <!-- Body input -->
+      <div class="editor-field body-field" contenteditable="true" data-placeholder="Tell your story..." id="storyBody">
+      </div>
+    </div>
+  </main>
+
+  <!-- Floating Formatting Toolbar -->
+  <div class="formatting-tooltip" id="formattingTooltip">
+    <p class="tooltip-hint">Select text to change formatting, add headers, or create links.</p>
+    <div class="tooltip-toolbar">
+      <button class="tool-btn" data-command="bold"><b>B</b></button>
+      <button class="tool-btn" data-command="italic"><i>i</i></button>
+      <button class="tool-btn" data-command="createLink">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path
+            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+        </svg>
+      </button>
+      <div class="tool-divider"></div>
+      <button class="tool-btn header-large" data-command="formatBlock" data-value="h2">T</button>
+      <button class="tool-btn header-small" data-command="formatBlock" data-value="h3">T</button>
+      <div class="tool-divider"></div>
+      <button class="tool-btn" title="Add list (bullet)" data-command="insertUnorderedList">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="./js/write.js"></script>
+</body>
+
+</html>
